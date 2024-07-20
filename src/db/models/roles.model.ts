@@ -7,7 +7,7 @@ import type { z } from "zod";
  */
 export const roles = pgTable("roles", {
 	id: serial("id").primaryKey().notNull(),
-	title: varchar("title", { length: 50 }).notNull(),
+	title: varchar("title", { length: 50 }).notNull().unique(),
 	description: varchar("description", { length: 256 }).notNull(),
 	createdAt: timestamp("created_at", {
 		mode: "date",

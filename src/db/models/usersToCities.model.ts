@@ -32,9 +32,7 @@ export const usersToCities = pgTable(
 			mode: "date",
 			precision: 6,
 			withTimezone: true,
-		})
-			.notNull()
-			.$onUpdateFn(() => new Date()),
+		}).$onUpdateFn(() => new Date()),
 	},
 	(t) => ({
 		pk: primaryKey({

@@ -16,7 +16,6 @@ import { relations } from "drizzle-orm";
 export const users = pgTable("users", {
 	id: serial("id").primaryKey().notNull(),
 	name: varchar("name", { length: 128 }).notNull(),
-	email: varchar("email").notNull().unique(),
 	roleId: integer("role_id")
 		.notNull()
 		.references(() => roles.id, { onDelete: "cascade" }),

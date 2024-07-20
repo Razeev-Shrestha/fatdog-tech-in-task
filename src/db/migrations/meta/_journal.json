@@ -8,6 +8,27 @@
       "when": 1721449305991,
       "tag": "0000_clear_leo",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1721454636401,
+      "tag": "0001_wise_vengeance",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1721457719454,
+      "tag": "0002_greedy_thunderbolt",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1721458883136,
+      "tag": "0003_soft_franklin_richards",
+      "breakpoints": true
     }
   ]
 }

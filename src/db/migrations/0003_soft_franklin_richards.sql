@@ -1,0 +1,1 @@
+ALTER TABLE "users_to_cities" ALTER COLUMN "updated_at" DROP NOT NULL;
