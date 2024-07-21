@@ -1,0 +1,20 @@
+services:
+  fatdog-dev:
+    image: fatdog-dev
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+
+  fatdog-prod:
+    image: fatdog-prod
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+    ports:
+      - "3000:3000"

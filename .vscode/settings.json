@@ -3,7 +3,9 @@
 		"biomejs",
 		"clsx",
 		"fatdog",
+		"hookform",
 		"neondatabase",
+		"sonner",
 		"tailwindcss",
 		"tanstack"
 	]
