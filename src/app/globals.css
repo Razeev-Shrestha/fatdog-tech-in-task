@@ -29,6 +29,13 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+
+    /** Custom colors */
+    --fat-dog-primary:201 92% 31%;
+    --fat-dog-secondary:235 14% 50%;
+    --fat-dog-tertiary:0 0% 25%;
+    --fat-dog-background:0 0% 99%;
+    --fat-dog-text:0 0% 12%;
   }
 
   .dark {
