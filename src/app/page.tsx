@@ -5,6 +5,7 @@ import { DragAndDropContainer } from './_components/drag-and-drop-container'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { CreateUserByCity } from './_components/create-user-by-city'
 import { MainSection } from './_components/main-section'
+import { CreateCity } from './_components/create-city'
 
 export default function Home() {
 	return (
@@ -14,8 +15,9 @@ export default function Home() {
 					<div className='col-span-1' />
 					<div className='col-span-8 bg-fatdog/5 px-3 py-4'>
 						<Card>
-							<CardHeader>
+							<CardHeader className='flex flex-row items-center justify-between'>
 								<Typography variant={'h2'}>Create User By City</Typography>
+								<CreateCity />
 							</CardHeader>
 							<CardContent>
 								<MainSection />

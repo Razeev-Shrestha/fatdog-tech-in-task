@@ -1,4 +1,4 @@
-import type { InsertUser, SelectCity, SelectRole, SelectUser } from '@/db/models'
+import type { InsertCity, InsertUser, SelectCity, SelectRole, SelectUser } from '@/db/models'
 import { fetcher, mutator } from '@/lib/api-handlers'
 import { useMutation, useQuery } from '@tanstack/react-query'
 import type { CreateUserByCityType } from '../_schema'
@@ -82,5 +82,12 @@ export const useDeleteUser = () => {
 	return useMutation<ApiResponseType<unknown>, unknown, { id: number }>({
 		mutationKey: ['delete-user'],
 		mutationFn: async ({ id }) => await mutator({ url: `/users/${id}`, method: 'DELETE', payload: null }),
+	})
+}
+
+export const useCreateCity = () => {
+	return useMutation<ApiResponseType<unknown>, unknown, InsertCity>({
+		mutationKey: ['create-city'],
+		mutationFn: async data => await mutator({ url: '/cities', method: 'POST', payload: data }),
 	})
 }

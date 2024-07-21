@@ -5,6 +5,7 @@ import {
 	BackpackIcon,
 	ReloadIcon,
 	CircleIcon,
+	PlusIcon,
 } from '@radix-ui/react-icons'
 import type { IconProps as RadixIconProps } from '@radix-ui/react-icons/dist/types'
 
@@ -15,6 +16,7 @@ const iconsCollection = {
 	backpack: BackpackIcon,
 	loader: ReloadIcon,
 	circle: CircleIcon,
+	plus: PlusIcon,
 }
 
 export interface IconProps extends RadixIconProps {
