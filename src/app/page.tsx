@@ -2,8 +2,9 @@ import { RootContainer } from '@/components/root-container'
 import { Typography } from '@/components/typography'
 import { UserList } from './_components/user-list'
 import { DragAndDropContainer } from './_components/drag-and-drop-container'
-import { Card, CardFooter, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { CreateUserByCity } from './_components/create-user-by-city'
+import { MainSection } from './_components/main-section'
 
 export default function Home() {
 	return (
@@ -16,6 +17,9 @@ export default function Home() {
 							<CardHeader>
 								<Typography variant={'h2'}>Create User By City</Typography>
 							</CardHeader>
+							<CardContent>
+								<MainSection />
+							</CardContent>
 							<CardFooter>
 								<CreateUserByCity />
 							</CardFooter>

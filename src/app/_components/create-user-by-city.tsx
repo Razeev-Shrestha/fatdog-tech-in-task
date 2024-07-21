@@ -41,7 +41,10 @@ export const CreateUserByCity = () => {
 		mutate(data, {
 			onSuccess: () => {
 				queryClient.invalidateQueries({
-					queryKey: ['users'],
+					predicate: q => q.queryKey[0] === 'users',
+				})
+				queryClient.invalidateQueries({
+					predicate: q => q.queryKey[0] === 'users-by-cities',
 				})
 				toast.success('User created successfully.')
 				form.reset()
@@ -61,9 +64,9 @@ export const CreateUserByCity = () => {
 	return (
 		<Dialog onOpenChange={onToggle} open={isOpen}>
 			<DialogTrigger asChild>
-				<ExtendedButton>Create user by city</ExtendedButton>
+				<ExtendedButton className='w-full'>Create user by city</ExtendedButton>
 			</DialogTrigger>
-			<DialogContent>
+			<DialogContent onInteractOutside={e => e.preventDefault()}>
 				<DialogHeader>
 					<DialogTitle>Create User By City</DialogTitle>
 					<DialogDescription>Create a new user by choosing a city.</DialogDescription>
