@@ -7,8 +7,6 @@ export const getCitiesController = async () => {
 	try {
 		const response = await getCitiesWithUsers()
 
-		console.log(response.rows)
-
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		const city = response.rows.reduce((acc: any, item: any) => {
 			// biome-ignore lint/suspicious/noExplicitAny: <explanation>

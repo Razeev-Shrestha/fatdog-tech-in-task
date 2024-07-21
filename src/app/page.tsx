@@ -1,11 +1,12 @@
 import { RootContainer } from '@/components/root-container'
 import { Typography } from '@/components/typography'
-import { UserList } from './_components/user-list'
 import { DragAndDropContainer } from './_components/drag-and-drop-container'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { CreateUserByCity } from './_components/create-user-by-city'
-import { MainSection } from './_components/main-section'
 import { CreateCity } from './_components/create-city'
+
+import { AllUsersList } from './_components/fetch-user-server'
+import { CitiesList } from './_components/fetch-cities-server'
 
 export default function Home() {
 	return (
@@ -20,7 +21,7 @@ export default function Home() {
 								<CreateCity />
 							</CardHeader>
 							<CardContent>
-								<MainSection />
+								<CitiesList />
 							</CardContent>
 							<CardFooter>
 								<CreateUserByCity />
@@ -31,7 +32,7 @@ export default function Home() {
 						<Typography variant='p4' className='font-semibold text-fatdog-text'>
 							User List
 						</Typography>
-						<UserList />
+						<AllUsersList />
 					</div>
 				</DragAndDropContainer>
 			</RootContainer>

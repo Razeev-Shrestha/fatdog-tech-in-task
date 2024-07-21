@@ -47,7 +47,6 @@ export const DragAndDropContainer: React.FC<React.PropsWithChildren> = ({ childr
 		const userId = (active.data.current as SelectUser).id
 
 		queryClient.setQueryData<ApiResponseType<SelectUser[]>>(['users'], oldData => {
-			console.log('old data', oldData)
 			if (oldData) {
 				return {
 					...oldData,

@@ -37,7 +37,6 @@ export const CreateUserByCity = () => {
 	)
 
 	const onFormSubmit = form.handleSubmit(data => {
-		console.log(data)
 		mutate(data, {
 			onSuccess: () => {
 				queryClient.invalidateQueries({
