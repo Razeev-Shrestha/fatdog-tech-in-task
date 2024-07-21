@@ -15,5 +15,8 @@ Used Libraries
 ### Runtime Used 
  Bun
 
+### LIVE URL 
+
+[Deployed URL](https://fatdog-tech-in-task.vercel.app/)
  
 
